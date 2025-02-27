@@ -1,0 +1,16 @@
+What actually happens with background-size: max(1200px, 100vw) on an 800px screen:
+The browser tries to make the background image 1200px wide (since 1200px is larger than 800px).
+
+BUT the screen itself is only 800px wide, so the image gets cropped (you’ll only see a portion of it).
+
+By default, the left/top part of the image is visible; the rest "spills over" outside the screen.
+
+Why use this code then?
+It’s useful if:
+You want the image to never shrink below 1200px (to avoid pixelation/blur on large screens).
+You don’t mind cropping the image on smaller screens (like mobile).
+
+Key Takeaway:
+The image is technically 1200px wide on an 800px screen, but only 800px of it is visible (the rest is hidden).
+
+This is not ideal for most designs unless cropping is intentional.

@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%; /* 62.5% is 10pixels basically as (10/16)X100 is 62.5 */
+}
+body{
+    background-color: black;
+}
+.main{
+    background-image: url('/Assets/Images/image1.jpg');
+    /* background-size: contain; */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: max(1200px, 100vw);
+    /* If you forgot about the working of max() function of background-size,
+    check the 'background-size(max()).txt' file in this folder itself for more details and clarity.*/
+    height: 70vh;
+    position: relative;
+}
+.main__box{
+    width: 100%;
+    height: 70vh;
+    opacity: 0.78;
+    background-color: black;
+    position: absolute;
+    top: 0;
+}
+.main__nav{
+    width: 60vw;
+    height: 9.2rem;
+    margin: auto;
+}
+.main__logo{
+    width: 13.3rem;
+}
+.main__nav--flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main__logo,.main__en,.main__signIn{
+    position: relative;
+    z-index: 10;
+}
+.main__en,.main__signIn{
+    font-size: 1.6rem;
+    font-weight: 350;
+    background: rgb(229, 9, 20);
+    color:rgb(255, 255, 255);
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.6rem;
+    border: 0.1rem solid rgb(229, 9, 20);
+    cursor: pointer;
+}
+.main__en{
+    background-color: rgba(23,23,23,0.2);
+    border: 0.2rem solid rgb(62, 59, 59);
+    margin-right: 0.7rem;
+}
+.main__en:hover{
+    background: rgb(247, 20, 32);
+}
+.main__hero{
+    height: calc(100% - 9.2rem);
+    color: white;
+    font-size: 1.9rem;
+    font-family: 'Martel Sans',sans-serif;
+    position: relative;
+    /* By default, elements with "position: relative;" will stack above elements with "position: static;" */
+    padding: 0 3rem;
+}
+.main__hero-first,.main__hero-second{
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 5.8rem;
+    text-align: center;
+}
+.main__hero-third{
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+}
+.main__hero-fourth{
+    line-height: 2.9rem;
+    font-weight: 400;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 2.5rem;
+    padding-bottom: 1.5rem;
+}
+.main__hero--flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main__hero-separation{
+    height: 0.6rem;
+    background: rgb(49, 49, 49);
+    position: relative;
+    z-index: 12;
+}
+.main__hero-email{
+    font-size: 1.5rem;
+    font-weight: 520;
+    border-radius: 0.5rem;
+    padding: 1.9rem 1.6rem 1.4rem;
+    background-color: rgba(23,23,23,0.2);
+    border: 0.2rem solid rgb(62, 59, 59);
+    color: white;
+    margin-right: 0.7rem;
+}
+.main__hero-button{
+    padding: 1.4rem 2.4rem 1.2rem;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    background: rgb(229, 9, 20);
+    color:rgb(255, 255, 255);
+}
+.first,.second,.third,.fourth{
+    display: flex;
+    max-width: 70vw;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    color: white;
+    font-size: 6rem;
+}
+.vidImg{
+    position: relative; 
+    /* Putting this on relative puts it on a higher stack than static position. */
+}
+.vidImg__img{
+    width: 30vw;
+    position: relative;
+    z-index: 10;
+}
+.vidImg__vid{
+    max-width: 23vw;
+    position: absolute;
+    top: 6rem;
+    right: 40px;   
+}
+.first__text,.second__text,.third__text,.fourth__text{
+    display: flex;
+    flex-direction: column;
+}
+.first__text--primary,.second__text--primary,.third__text--primary,.fourth__text--primary{
+    font-size: 5.5rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+.first__text--secondary,.second__text--secondary,.third__text--secondary,.fourth__text--secondary{
+    font-size: 2rem;   
+}
+.separation{
+    height: 0.6rem;
+    background: rgb(49, 49, 49);
+}
+.fourth{
+    padding-top: 8rem;
+    padding-bottom: 7rem;
+    gap: 21rem;
+}
+.fourth__text--primary{
+    font-size: 4.4rem;
+}
+.fourth .vidImg{
+    width: 20vw;
+}
+.faq{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+.faq__box--hr{
+    height: 0.1rem;
+    background-color: white;
+    border: none;
+}
+.faq__box{
+    max-width: 60vw;
+    margin: 1rem auto;
+}
+.faq__box--question span,
+.faq__box--question svg {
+    vertical-align: middle;
+}
+.faq__h2{
+    color: white;
+    text-align: center;
+    font-size: 4rem;
+    padding-bottom: 1.5rem;
+}
+.faq__box--question{
+    background: rgb(22, 22, 22);
+    /* or, you could use the color "#2d2d2d" instead*/
+    padding: 3rem 2.9rem;
+    color: white;
+    font-size: 4rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    font-family: 'Martel Sans',sans-serif;
+}
+.faq__box--question:hover{
+    background: rgb(47, 46, 46);
+    /* or, you could use the color "#414141" instead. */
+}
+.faq__box--answer{
+    color: white;
+    font-size: 2rem;
+    background: rgb(22,22,22);
+    padding: 3rem 2.9rem;
+    font-weight: 400;
+    font-family: 'Martel Sans',sans-serif;
+}
+.faq__box--answer,.faq__box--hr{
+    display: none;
+}
+footer{
+    max-width: 60vw;
+    margin: auto;
+    color: white;
+    font-size: 3rem;
+    padding: 4rem 0;
+}
+.helpLine{
+    padding: 3rem 0;
+    color: rgba(255, 255, 255, 0.7);
+}
+.footerContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.footerContainer__item{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.footerContainer__item a{
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+.footerContainer__item a:hover{
+    color: white;
+}
